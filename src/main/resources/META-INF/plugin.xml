@@ -23,9 +23,17 @@
             <add-to-group group-id="MainMenu" anchor="last"/>
 
             <action id="MyCustomAction"
-                    class="MyNotificationAction"
+                    class="actions.MyNotificationAction"
                     text="Trigger Notification"
                     description="Click to display notification"/>
         </group>
     </actions>
+
+    <application-components>
+        <component>
+            <implementation-class>
+                components.MyComponent
+            </implementation-class>
+        </component>
+    </application-components>
 </idea-plugin>
