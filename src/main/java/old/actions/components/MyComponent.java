@@ -1,4 +1,4 @@
-package components;
+package old.actions.components;
 
 import com.intellij.ide.plugins.PluginManager;
 import com.intellij.notification.NotificationDisplayType;

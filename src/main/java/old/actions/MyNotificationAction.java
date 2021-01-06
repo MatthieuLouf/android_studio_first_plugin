@@ -1,4 +1,4 @@
-package actions;
+package old.actions;
 
 import com.intellij.notification.NotificationDisplayType;
 import com.intellij.notification.NotificationGroup;

@@ -12,7 +12,9 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <fileType name="Simple File" implementationClass="language.SimpleFileType"
+                  fieldName="INSTANCE" language="Simple" extensions="simple"/>
+        <fileTypeFactory implementation="language.SimpleFileTypeFactory"/>
     </extensions>
 
     <actions>
@@ -23,7 +25,7 @@
             <add-to-group group-id="MainMenu" anchor="last"/>
 
             <action id="MyCustomAction"
-                    class="actions.MyNotificationAction"
+                    class="old.actions.MyNotificationAction"
                     text="Trigger Notification"
                     description="Click to display notification"/>
         </group>
@@ -32,7 +34,7 @@
     <application-components>
         <component>
             <implementation-class>
-                components.MyComponent
+                old.actions.components.MyComponent
             </implementation-class>
         </component>
     </application-components>
