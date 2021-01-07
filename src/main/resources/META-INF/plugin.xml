@@ -12,9 +12,17 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Simple File" implementationClass="language.SimpleFileType"
+        <localInspection language="JAVA"
+                         displayName="Inspection basics"
+                         groupName="Example inspections"
+                         groupPath="SDK"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         implementationClass="JavaCodeInspection"/>
+
+        <fileType name="Simple File" implementationClass="old.language.SimpleFileType"
                   fieldName="INSTANCE" language="Simple" extensions="simple"/>
-        <fileTypeFactory implementation="language.SimpleFileTypeFactory"/>
+        <fileTypeFactory implementation="old.language.SimpleFileTypeFactory"/>
     </extensions>
 
     <actions>
@@ -34,7 +42,7 @@
     <application-components>
         <component>
             <implementation-class>
-                old.actions.components.MyComponent
+                old.components.MyComponent
             </implementation-class>
         </component>
     </application-components>

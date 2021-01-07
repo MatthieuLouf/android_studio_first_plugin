@@ -1,0 +1,13 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="7912f76e-2478-370d-b2c0-095e58b4cb3d" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <replaceConfiguration name="test custom inspection" problemDescriptor="#ref" text="System.out.println($string$ + $expr$);" recursive="false" caseInsensitive="false" type="JAVA" pattern_context="default" reformatAccordingToStyle="false" shortenFQN="false" replacement="$expr$.inspect($string$);">
+        <constraint name="__context__" within="" contains="" />
+        <constraint name="string" within="" contains="" />
+        <constraint name="expr" within="" contains="" />
+      </replaceConfiguration>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,4 +1,4 @@
-package language;
+package old.language;
 
 import com.intellij.lang.Language;
 

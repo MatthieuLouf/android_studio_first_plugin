@@ -1,4 +1,4 @@
-package language;
+package old.language;
 
 
 import com.intellij.openapi.fileTypes.LanguageFileType;

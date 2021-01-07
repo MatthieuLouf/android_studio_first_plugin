@@ -1,6 +1,6 @@
-package language.psi;
+package old.language.psi;
 import com.intellij.psi.tree.IElementType;
-import language.SimpleLanguage;
+import old.language.SimpleLanguage;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
