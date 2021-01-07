@@ -7,18 +7,14 @@
     First Plugin First Plugin First Plugin First Plugin First Plugin First Plugin
     ]]></description>
 
+    <depends>com.intellij.modules.java</depends>
+
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <localInspection language="JAVA"
-                         displayName="Inspection basics"
-                         groupName="Example inspections"
-                         groupPath="SDK"
-                         enabledByDefault="true"
-                         level="WARNING"
-                         implementationClass="JavaCodeInspection"/>
+        <inspectionToolProvider implementation="JavaCodeInspectionProvider"/>
 
         <fileType name="Simple File" implementationClass="old.language.SimpleFileType"
                   fieldName="INSTANCE" language="Simple" extensions="simple"/>

@@ -1,18 +1,26 @@
-
-import com.intellij.codeInspection.LocalInspectionTool;
+import com.intellij.codeInsight.daemon.GroupNames;
+import com.intellij.codeInspection.AbstractBaseJavaLocalInspectionTool;
 import com.intellij.codeInspection.ProblemsHolder;
 import org.jetbrains.annotations.NotNull;
 
-public class JavaCodeInspection extends LocalInspectionTool {
+public class JavaCodeInspection extends AbstractBaseJavaLocalInspectionTool {
 
-    /**
-     * This method is overridden to provide a custom visitor.
-     * The visitor must not be recursive and must be thread-safe.
-     *
-     * @param holder     object for visitor to register problems found.
-     * @param isOnTheFly true if inspection was run in non-batch mode
-     * @return {@link JavaInspectionVisitor} instance
-     */
+    public String getDisplayName() {
+        return "Naming of a String as string is not recommended ";
+    }
+
+    public String getGroupDisplayName() {
+        return GroupNames.NAMING_CONVENTIONS_GROUP_NAME;
+    }
+
+    public String getShortName() {
+        return "StringBasicName";
+    }
+
+    public boolean isEnabledByDefault() {
+        return true;
+    }
+
     @NotNull
     @Override
     public JavaInspectionVisitor buildVisitor(@NotNull ProblemsHolder holder, boolean isOnTheFly) {

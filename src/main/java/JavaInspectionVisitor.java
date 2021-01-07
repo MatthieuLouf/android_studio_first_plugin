@@ -15,7 +15,7 @@ public class JavaInspectionVisitor extends PsiElementVisitor {
     public void visitElement(@NotNull PsiElement element) {
         if(element.getText().equals("string") && element.getPrevSibling().getPrevSibling().getText().equals("String"))
         {
-            problemsHolder.registerProblem(element,"This is not a proper name");
+            problemsHolder.registerProblem(element,"This is not a proper name", new ChangeNameQuickFix());
         }
         super.visitElement(element);
     }

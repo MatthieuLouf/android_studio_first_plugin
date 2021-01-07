@@ -11,12 +11,17 @@ repositories {
 }
 
 dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
+
+    testCompile group: 'org.jboss.shrinkwrap', name: 'shrinkwrap-depchain', version: '1.2.6', ext: 'pom'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
+    plugins = ['java']
     version '2020.2'
     intellij.updateSinceUntilBuild false
     alternativeIdePath 'C:\\Program Files\\Android\\Android Studio'
