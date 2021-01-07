@@ -7,6 +7,7 @@ import com.intellij.notification.NotificationType;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.*;
 
+import com.intellij.psi.impl.PsiJavaParserFacadeImpl;
 import org.jetbrains.annotations.NotNull;
 
 public class ChangeNameQuickFix implements LocalQuickFix {
@@ -18,6 +19,8 @@ public class ChangeNameQuickFix implements LocalQuickFix {
 
     @Override
     public void applyFix(@NotNull Project project, @NotNull ProblemDescriptor descriptor) {
+        PsiJavaParserFacade facade = JavaPsiFacade.getInstance(project).getParserFacade();
+        descriptor.getPsiElement().replace(facade.createTypeElementFromText("properStringName",descriptor.getPsiElement().getContext()));
 
         NotificationGroup notification = new NotificationGroup("changeStringName", NotificationDisplayType.BALLOON,true);
         notification.createNotification("String name changed !",
