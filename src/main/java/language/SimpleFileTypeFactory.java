@@ -1,8 +1,7 @@
-package language_definition;
+package language;
 
 import com.intellij.openapi.fileTypes.FileTypeConsumer;
 import com.intellij.openapi.fileTypes.FileTypeFactory;
-import language_definition.SimpleFileType;
 import org.jetbrains.annotations.NotNull;
 
 /**

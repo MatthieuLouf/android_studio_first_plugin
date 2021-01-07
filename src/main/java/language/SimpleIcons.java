@@ -1,4 +1,4 @@
-package language_definition;
+package language;
 
 
 import com.intellij.openapi.util.IconLoader;
