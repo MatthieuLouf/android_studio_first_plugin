@@ -24,7 +24,7 @@ public class ChangeNameQuickFix implements LocalQuickFix {
 
         NotificationGroup notification = new NotificationGroup("changeStringName", NotificationDisplayType.BALLOON,true);
         notification.createNotification("String name changed !",
-                "Name of the string changed at line " +descriptor.getLineNumber()+1,
+                "Name of the string changed at line " +(descriptor.getLineNumber()+1),
                 NotificationType.INFORMATION,
                 null).notify(null);
     }
