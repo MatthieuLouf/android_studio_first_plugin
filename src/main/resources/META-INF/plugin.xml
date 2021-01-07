@@ -12,9 +12,9 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Simple File" implementationClass="language.SimpleFileType"
+        <fileType name="Simple File" implementationClass="language_definition.SimpleFileType"
                   fieldName="INSTANCE" language="Simple" extensions="simple"/>
-        <fileTypeFactory implementation="language.SimpleFileTypeFactory"/>
+        <fileTypeFactory implementation="language_definition.SimpleFileTypeFactory"/>
     </extensions>
 
     <actions>
