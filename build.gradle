@@ -17,9 +17,9 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '201.8743.12'
+    version '2020.2'
     intellij.updateSinceUntilBuild false
-    //alternativeIdePath 'C:\\Program Files\\Android\\Android Studio'
+    alternativeIdePath 'C:\\Program Files\\Android\\Android Studio'
 }
 patchPluginXml {
     changeNotes """

@@ -1,5 +1,5 @@
-import com.intellij.codeInspection.LocalInspectionTool;
 
+import com.intellij.codeInspection.LocalInspectionTool;
 import com.intellij.codeInspection.ProblemsHolder;
 import org.jetbrains.annotations.NotNull;
 
@@ -16,7 +16,7 @@ public class JavaCodeInspection extends LocalInspectionTool {
     @NotNull
     @Override
     public JavaInspectionVisitor buildVisitor(@NotNull ProblemsHolder holder, boolean isOnTheFly) {
-        return new JavaInspectionVisitor();
+        return new JavaInspectionVisitor(holder);
     }
 
 }
